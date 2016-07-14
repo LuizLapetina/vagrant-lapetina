@@ -21,7 +21,7 @@ Configuração do Vagrant (com provisionamento em Shell Script) para criar uma m
 
 
 Você vai precisar: 
-==============
+==================
 
 - Virtualbox - https://www.virtualbox.org/
 - Vagrant - http://www.vagrantup.com/
@@ -45,7 +45,7 @@ A instalação inicial pode ser feita de duas formas, sendo:
 
 - git clone https://github.com/LuizLapetina/vagrant-lapetina.git ( Execute o comando no seu Prompt/Terminal )
 
-* Ainda no Prompt de comando/Terminal Entre no diretório vagrant-setup-php  ( Ou o que você definir na hora da clonagem )
+* Ainda no Prompt de comando/Terminal Entre no diretório vagrant-lapetina  ( Ou o que você definir na hora da clonagem )
 
 * Inicie a máquina virtual com o comando:
 
@@ -73,7 +73,9 @@ Quando tudo estiver pronto, um servidor web estará disponível no endereço htt
 obs:(A senha padrão para todos os serviços é vagrant).
 
 
-Coloque seu código no diretório "www". Todo o conteúdo dele estará disponível via http://localhost:8888. (Como teste, já existe um arquivo index.php que chama a função phpinfo() ).
+Coloque seu código no diretório "www". Todo o conteúdo dele estará disponível via http://localhost:8888/index.php. (Como teste, já existe um arquivo index.php que chama a função phpinfo() ).
+
+Opcionalmente você poderá utilizar http://192.168.33.11/index.php
 
 Para desligar a máquina virtual utilize o comando:
 
