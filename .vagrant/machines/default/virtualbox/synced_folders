@@ -1,1 +1,0 @@
-{"virtualbox":{"/var/www":{"owner":"www-data","group":"www-data","mount_options":["dmode=777","fmode=666"],"guestpath":"/var/www","hostpath":"/Users/luizlapetina/vagrant/www","disabled":false,"__vagrantfile":true},"/vagrant":{"owner":"vagrant","group":"vagrant","guestpath":"/vagrant","hostpath":"/Users/luizlapetina","disabled":false,"__vagrantfile":true}}}
