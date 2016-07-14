@@ -25,7 +25,7 @@ phpmyadmin      phpmyadmin/mysql/app-pass       password $DEFAULTPASS
 EOF
 
 echo "--- Instalando pacotes basicos ---"
-sudo apt-get -y install vim curl python-software-properties git-core software-properties-common 
+sudo apt-get -y install vim curl python-software-properties git-core software-properties-common --force-yes 
 
 echo "--- Adicionando repositorio do pacote PHP 7.0 e MariaDB ---"
 sudo add-apt-repository -y ppa:ondrej/php
@@ -36,16 +36,21 @@ echo "--- Atualizando lista de pacotes ---"
 sudo apt-get update
 
 echo "--- Instalando MariaDB (Server e Client) e Phpmyadmin ---"
-sudo apt-get -y install mariadb-server mariadb-client phpmyadmin
+sudo apt-get -y install mariadb-server mariadb-client  --force-yes
 
 echo "--- Instalando PHP e os módulos necessários, Apache, Redis e XDEBUG ---"
-sudo apt-get -y install redis-server  apache2 php7.0 libapache2-mod-php7.0 php7.0-curl php7.0-gd php7.0-mcrypt  php7.0-mysql php7.0-dev php7.0-redis php7.0-xdebug
+sudo apt-get -y install redis-server  apache2 php7.0 libapache2-mod-php7.0 php7.0-curl php7.0-gd php7.0-mcrypt  php7.0-mysql php7.0-dev php7.0-redis php7.0-xdebug  --force-yes
 
 echo "--- Habilitando mod-rewrite e o PHP 7.0 no Apache ---"
 sudo a2enmod rewrite
 sudo a2enmod php7.0
 
 echo "--- Reiniciando Apache ---"
+sudo service apache2 restart
+
+echo "***** ïnstalando o PHPMyAdmin *******"
+sudo apt-get -y install phpmyadmin php7.0-mbstring php7.0-gettext  --force-yes
+sudo rm /etc/apache2/mods-enabled/php5*
 sudo service apache2 restart
 
 echo "--- Baixando e Instalando Composer ---"
