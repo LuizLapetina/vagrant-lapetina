@@ -35,7 +35,7 @@ sudo add-apt-repository -y 'deb [arch=amd64,i386,ppc64el] http://mirror.edatel.n
 echo "--- Atualizando lista de pacotes ---"
 sudo apt-get update
 
-echo "--- Instalando MariaDB (Server e Client) e Phpmyadmin ---"
+echo "--- Instalando MariaDB (Server e Client)  ---"
 sudo apt-get -y install mariadb-server mariadb-client  --force-yes
 
 echo "--- Instalando PHP e os módulos necessários, Apache, Redis e XDEBUG ---"
@@ -48,7 +48,7 @@ sudo a2enmod php7.0
 echo "--- Reiniciando Apache ---"
 sudo service apache2 restart
 
-echo "***** ïnstalando o PHPMyAdmin *******"
+echo "***** Instalando o PHPMyAdmin *******"
 sudo apt-get -y install phpmyadmin php7.0-mbstring php7.0-gettext  --force-yes
 sudo rm /etc/apache2/mods-enabled/php5*
 sudo service apache2 restart
